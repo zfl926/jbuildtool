@@ -40,4 +40,25 @@ public class FileNode {
 		this.path = path;
 	}
 
+	public static FileNode createNode(String name, String relativePath, Type type, FileNode parent){
+		if ( name == null || relativePath == null || type == null ){
+			throw new IllegalArgumentException();
+		}
+		
+		FileNode node = new FileNode();
+		node.setName(name);
+		if ( parent != null){
+			node.setPath(parent.getPath() + "/" + relativePath);
+			parent.getChilds().add(node);
+		}
+		else{
+			node.setPath(relativePath);
+		}
+		node.setParentNode(parent);
+		node.setType(type);
+		
+		return node;
+	}
+	
+	
 }

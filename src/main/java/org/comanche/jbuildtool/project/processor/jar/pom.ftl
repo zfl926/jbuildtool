@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>comanch</groupId>
-	<artifactId>jbuildtool</artifactId>
+	<groupId>${groupIdName}</groupId>
+	<artifactId>${projectName}</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>jbuildtool</name>
+	<name>${projectName}</name>
 
 
 	<properties>
@@ -34,11 +34,6 @@
 			<artifactId>junit</artifactId>
 			<version>4.2</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.20</version>
 		</dependency>
 	</dependencies>
 </project>
