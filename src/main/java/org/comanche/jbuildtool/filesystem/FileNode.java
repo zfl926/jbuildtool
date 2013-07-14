@@ -60,5 +60,23 @@ public class FileNode {
 		return node;
 	}
 	
+	public static FileNode findNode(FileNode root, String fullName){
+		
+		if ( fullName != null && root != null) {
+			// source path:
+			String sourcePath = root.getPath() + root.getName();
+			if ( sourcePath.equalsIgnoreCase(fullName) ){
+				return root;
+			}
+			
+			for ( FileNode node : root.getChilds() ){
+				findNode(node, fullName);
+			}
+		}
+		
+		return null;
+		
+	}
+	
 	
 }

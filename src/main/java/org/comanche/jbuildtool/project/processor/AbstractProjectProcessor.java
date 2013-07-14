@@ -51,19 +51,19 @@ public abstract class AbstractProjectProcessor implements ProjectProcessor {
 		// create project name node
 		FileNode projectNode = FileNode.createNode(project.getProjectName(), project.getPath(), Type.FOLDER, null);
 		// create src
-		FileNode srcNode = FileNode.createNode("src", "/src", Type.FOLDER, projectNode);
+		FileNode srcNode = FileNode.createNode("src", "src", Type.FOLDER, projectNode);
 		// create main
-		FileNode mainNode = FileNode.createNode("main", "/main", Type.FOLDER, srcNode);
+		FileNode mainNode = FileNode.createNode("main", "main", Type.FOLDER, srcNode);
 		// create java
-		FileNode.createNode("java", "/java", Type.FOLDER, mainNode);
+		FileNode.createNode("java", "java", Type.FOLDER, mainNode);
 		// create resource
-		FileNode.createNode("resources", "/resources", Type.FOLDER, mainNode);
+		FileNode.createNode("resources", "resources", Type.FOLDER, mainNode);
 		// create test
-		FileNode testNode = FileNode.createNode("test", "/test", Type.FOLDER, srcNode);
+		FileNode testNode = FileNode.createNode("test", "test", Type.FOLDER, srcNode);
 		// create test/java
-		FileNode.createNode("java", "/java", Type.FOLDER, testNode);
+		FileNode.createNode("java", "java", Type.FOLDER, testNode);
 		// create test/resources
-		FileNode.createNode("resources", "/resources", Type.FOLDER, testNode);
+		FileNode.createNode("resources", "resources", Type.FOLDER, testNode);
 		return projectNode;
 	}
 	
